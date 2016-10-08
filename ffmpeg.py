@@ -11,11 +11,9 @@ for name in os.listdir():
         for line in out:
             matches = re_length.findall(str(line))
             if matches:
-                print(str(matches))
                 for c in matches:
-                    print('minutes, Duration:', c[0], c[1], c[2])
+                    print('minutes, Duration:', c[0]+":"+c[1]+":"+c[2])
                     duration = int(c[0]) * 3600 + int(c[1]) * 60 + float(c[2])
-                print(duration)
                 for i in range(int(duration / (300)) + 1):
                     _t = ''
                     if duration > 300 * (i + 1):
