@@ -1,7 +1,7 @@
 #coding=utf-8
 import os,traceback
-s = os.sep //检测分隔符\或者/
-root = "/mnt/hd"+s//设定起始目录
+s = os.sep #检测分隔符\或者/
+root = "/mnt/hd"+s #设定起始目录
 file=open('filename.txt',"a",encoding='utf-8')
 for rt,dirs,files in os.walk(root):
     for f in files:
